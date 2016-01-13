@@ -1,0 +1,61 @@
+{% extends "main.html" %}
+{% block content %}
+	<div class="row top-menu">
+		<div class="col-md-10"></div>
+		<div class="col-md-2 text-right">
+
+		</div>
+	</div>
+	<div class="row divider blue">
+		<div class="col-md-12"></div>
+	</div>
+	<div class="row banner main">
+		<div class="col-md-1"></div>
+		<div class="col-md-11 padding-none">
+			<h1>Kpacitor PI Robo</h1>
+		</div>
+	</div>
+
+	<a href = "{{url_for('comando_kpacitorpi', cod_movimentar = 1)}}">
+		<div class="row">
+			<div class="col-md-1"></div>
+				<div class="col-md-10 restaurant-list">
+					<h3>FRENTE</h3>
+				</div>
+			<div class="col-md-1"></div>
+		</div>
+	</a>
+
+	<a href = "{{url_for('comando_kpacitorpi', cod_movimentar = 2)}}">
+		<div class="row">
+			<div class="col-md-1"></div>
+				<div class="col-md-10 restaurant-list">
+					<h3>TRAS</h3>
+				</div>
+			<div class="col-md-1"></div>
+		</div>
+	</a>
+
+	<a href = "{{url_for('comando_kpacitorpi', cod_movimentar = 3)}}">
+		<div class="row">
+			<div class="col-md-1"></div>
+				<div class="col-md-10 restaurant-list">
+					<h3>ESQUERDA</h3>
+				</div>
+			<div class="col-md-1"></div>
+		</div>
+	</a>
+
+	<a href = "{{url_for('comando_kpacitorpi', cod_movimentar = 4)}}">
+		<div class="row">
+			<div class="col-md-1"></div>
+				<div class="col-md-10 restaurant-list">
+					<h3>DIREITA</h3>
+				</div>
+			<div class="col-md-1"></div>
+		</div>
+	</a>
+
+
+
+{% endblock %}
