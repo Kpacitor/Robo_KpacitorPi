@@ -4,7 +4,6 @@
 from flask import Flask, render_template, request, redirect, jsonify, url_for, flash
 from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
-from database_setup import Base, Restaurant, MenuItem, User
 from flask import session as login_session
 import random
 import string
@@ -54,10 +53,23 @@ def comando_kpacitorpi(cod_movimentar):
 	 		movimentar("DIREITA")	
 		elif cod_movimentar == 5:
 			movimentar("STOP")
-		else	
+		else:	
 			print "Ok, Movimentado"
 	else:
-		return render_template('kpacitorpi.html')
+		if cod_movimentar == 1:
+			movimentar("FRENTE")
+		elif cod_movimentar == 2:
+			movimentar("TRAS")
+		elif cod_movimentar == 3:
+			movimentar("ESQUERDA")
+	 	elif cod_movimentar == 4:
+	 		movimentar("DIREITA")	
+		elif cod_movimentar == 5:
+			movimentar("STOP")
+		else:	
+			print "Ok, Movimentado"
+
+	return render_template('kpacitorpi.html')
 
 
 @app.route("/movimentar")
